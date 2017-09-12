@@ -15,3 +15,6 @@
 [0912/024157.402:ERROR:crash_report_database_win.cc(427)] unexpected header
 [0912/025657.403:ERROR:crash_report_database_win.cc(427)] unexpected header
 [0912/031157.404:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0912/193204.927:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0912/193204.927:ERROR:exception_handler_server.cc(526)] ConnectNamedPipe: The pipe is being closed. (0xE8)
+[0912/193417.718:ERROR:crash_report_database_win.cc(427)] unexpected header
