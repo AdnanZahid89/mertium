@@ -1,0 +1,19 @@
+// custom variables and override bootstrap variables
+
+// custom variables
+
+$light-gray								: #ccc;
+
+
+$modal-form-width						: 466px;
+$base-min-width							: 320px;
+
+
+// bootstrap override 
+$bootstrap-sass-asset-helper			: true !default;
+$icon-font-path							: if($bootstrap-sass-asset-helper, "bootstrap/", "./fonts/bootstrap/") !default;
+
+$gray-base								: #000 !default;
+$gray									: lighten($gray-base, 33.5%) !default; // #555
+$gray-dark								: lighten($gray-base, 20%) !default;   // #333
+

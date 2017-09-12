@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  -ms-overflow-style: scrollbar; }
+
+a,
+button {
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
+  a:hover,
+  button:hover {
+    -webkit-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+
+a {
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+#root,
+#wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+#header {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  z-index: 99;
+  padding: 5px 0;
+  margin: 0 0 10px; }
+
+.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  vertical-align: top;
+  white-space: normal;
+  outline: none;
+  text-decoration: none; }
+  .btn:disabled {
+    background: #ccc;
+    color: white;
+    border-color: #ccc; }
+    .btn:disabled:hover, .btn:disabled:active, .btn:disabled:focus {
+      background: #ccc;
+      color: white;
+      border-color: #ccc; }

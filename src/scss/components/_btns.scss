@@ -1,0 +1,21 @@
+.btn{
+	@include border-radius(0);
+	vertical-align: top;
+	white-space: normal;
+	outline: none;
+	text-decoration: none;
+	
+	&:disabled{
+		background: $light-gray;
+		color: white;
+		border-color: $light-gray;
+		
+		&:hover,
+		&:active,
+		&:focus{
+			background: $light-gray;
+			color: white;
+			border-color: $light-gray;
+		}
+	}
+}

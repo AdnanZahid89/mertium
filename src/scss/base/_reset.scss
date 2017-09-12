@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	min-width: $base-min-width;
+	-ms-overflow-style: scrollbar;
+}
+
+a,
+button {
+	@include transition(all 0.25s linear);
+	&:hover {
+		@include transition(all 0.25s linear);
+	}
+}
+
+a{
+	text-decoration: underline;
+	
+	&:hover{text-decoration: none;}
+}
+
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
