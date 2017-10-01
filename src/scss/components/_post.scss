@@ -1,0 +1,55 @@
+.post{
+    overflow: hidden;
+
+    .img-holder{
+        overflow: hidden;
+        margin: 0 0 10px;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .text-holder{
+        overflow: hidden;
+
+        .post-header{
+            overflow: hidden;
+            margin: 0 0 10px;
+
+            h2{margin: 0;}
+        }
+
+        .meta{
+            overflow: hidden;
+            font-size: 13px;
+            letter-spacing: -6px;
+            color: $gray;
+
+            span{
+                @include v-alignment(top);
+
+                &:before{
+                    @include v-alignment(top);
+                    content: '-';
+                    margin: 0 4px;
+                    color: $gray;
+                }
+
+                &:first-child{
+                    &:before{display: none;}
+                }
+
+                &.post-author{
+                    color: lighten($gray,20%);
+                }
+
+                 &.post-date{
+                    color: lighten($gray,40%);
+                }
+            }
+        }
+    }
+}

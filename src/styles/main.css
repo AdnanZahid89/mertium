@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Germania+One|Open+Sans:400,400i,600");
 body {
   margin: 0;
   min-width: 320px;
@@ -15,7 +16,7 @@ button {
     transition: all 0.25s linear; }
 
 a {
-  text-decoration: underline; }
+  text-decoration: none; }
   a:hover {
     text-decoration: none; }
 
@@ -71,3 +72,96 @@ a {
       background: #ccc;
       color: white;
       border-color: #ccc; }
+
+.feed-list {
+  margin: 0 -15px 20px;
+  letter-spacing: -6px; }
+  .feed-list li {
+    vertical-align: top;
+    letter-spacing: 0;
+    padding: 0 15px 20px;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .feed-list li {
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .feed-list li {
+        width: 33.33%; } }
+    @media (min-width: 1200px) {
+      .feed-list li {
+        width: 25%; } }
+  .feed-list .img-holder {
+    overflow: hidden;
+    margin: 0 0 10px; }
+    .feed-list .img-holder img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .feed-list .text-holder {
+    overflow: hidden; }
+    .feed-list .text-holder .post-header {
+      overflow: hidden;
+      margin: 0 0 10px; }
+      .feed-list .text-holder .post-header h2 {
+        margin: 0; }
+    .feed-list .text-holder .meta {
+      overflow: hidden;
+      font-size: 13px;
+      letter-spacing: -6px;
+      color: #555555; }
+      .feed-list .text-holder .meta span {
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: 0; }
+        .feed-list .text-holder .meta span:before {
+          display: inline-block;
+          vertical-align: top;
+          letter-spacing: 0;
+          content: '-';
+          margin: 0 4px;
+          color: #555555; }
+        .feed-list .text-holder .meta span:first-child:before {
+          display: none; }
+        .feed-list .text-holder .meta span.post-author {
+          color: #888888; }
+        .feed-list .text-holder .meta span.post-date {
+          color: #bbbbbb; }
+
+.post {
+  overflow: hidden; }
+  .post .img-holder {
+    overflow: hidden;
+    margin: 0 0 10px; }
+    .post .img-holder img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .post .text-holder {
+    overflow: hidden; }
+    .post .text-holder .post-header {
+      overflow: hidden;
+      margin: 0 0 10px; }
+      .post .text-holder .post-header h2 {
+        margin: 0; }
+    .post .text-holder .meta {
+      overflow: hidden;
+      font-size: 13px;
+      letter-spacing: -6px;
+      color: #555555; }
+      .post .text-holder .meta span {
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: 0; }
+        .post .text-holder .meta span:before {
+          display: inline-block;
+          vertical-align: top;
+          letter-spacing: 0;
+          content: '-';
+          margin: 0 4px;
+          color: #555555; }
+        .post .text-holder .meta span:first-child:before {
+          display: none; }
+        .post .text-holder .meta span.post-author {
+          color: #888888; }
+        .post .text-holder .meta span.post-date {
+          color: #bbbbbb; }
