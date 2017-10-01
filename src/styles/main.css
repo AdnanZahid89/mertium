@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Germania+One|Open+Sans:400,400i,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Roboto:400,700");
 body {
   margin: 0;
   min-width: 320px;
@@ -73,58 +73,62 @@ a {
       color: white;
       border-color: #ccc; }
 
-.feed-list {
-  margin: 0 -15px 20px;
+.feed-list.list-inline {
+  margin: 0 -10px 20px;
   letter-spacing: -6px; }
-  .feed-list li {
+  .feed-list.list-inline li {
     vertical-align: top;
     letter-spacing: 0;
-    padding: 0 15px 20px;
+    padding: 0 10px 20px;
     width: 100%; }
     @media (min-width: 768px) {
-      .feed-list li {
+      .feed-list.list-inline li {
         width: 50%; } }
     @media (min-width: 992px) {
-      .feed-list li {
+      .feed-list.list-inline li {
         width: 33.33%; } }
     @media (min-width: 1200px) {
-      .feed-list li {
+      .feed-list.list-inline li {
         width: 25%; } }
-  .feed-list .img-holder {
+  .feed-list.list-inline .img-holder {
     overflow: hidden;
     margin: 0 0 10px; }
-    .feed-list .img-holder img {
+    .feed-list.list-inline .img-holder img {
       display: block;
       width: 100%;
       height: auto; }
-  .feed-list .text-holder {
+  .feed-list.list-inline .text-holder {
     overflow: hidden; }
-    .feed-list .text-holder .post-header {
+    .feed-list.list-inline .text-holder .post-header {
       overflow: hidden;
-      margin: 0 0 10px; }
-      .feed-list .text-holder .post-header h2 {
+      margin: 0 0 15px; }
+      .feed-list.list-inline .text-holder .post-header h2 {
         margin: 0; }
-    .feed-list .text-holder .meta {
+        .feed-list.list-inline .text-holder .post-header h2 a {
+          color: #111; }
+          .feed-list.list-inline .text-holder .post-header h2 a:hover {
+            color: black; }
+    .feed-list.list-inline .text-holder .meta {
       overflow: hidden;
       font-size: 13px;
       letter-spacing: -6px;
       color: #555555; }
-      .feed-list .text-holder .meta span {
+      .feed-list.list-inline .text-holder .meta span {
         display: inline-block;
         vertical-align: top;
         letter-spacing: 0; }
-        .feed-list .text-holder .meta span:before {
+        .feed-list.list-inline .text-holder .meta span:before {
           display: inline-block;
           vertical-align: top;
           letter-spacing: 0;
           content: '-';
           margin: 0 4px;
           color: #555555; }
-        .feed-list .text-holder .meta span:first-child:before {
+        .feed-list.list-inline .text-holder .meta span:first-child:before {
           display: none; }
-        .feed-list .text-holder .meta span.post-author {
+        .feed-list.list-inline .text-holder .meta span.post-author {
           color: #888888; }
-        .feed-list .text-holder .meta span.post-date {
+        .feed-list.list-inline .text-holder .meta span.post-date {
           color: #bbbbbb; }
 
 .post {

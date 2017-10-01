@@ -1,11 +1,11 @@
-.feed-list{
-    margin: 0 -15px 20px;
+.feed-list.list-inline{
+    margin: 0 -10px 20px;
     letter-spacing: -6px;
 
     li{
         vertical-align: top;
         letter-spacing: 0;
-        padding: 0 15px 20px;
+        padding: 0 10px 20px;
         width: 100%;
 
         @include media('≥tablet') {width: 50%;}
@@ -29,9 +29,19 @@
 
         .post-header{
             overflow: hidden;
-            margin: 0 0 10px;
+            margin: 0 0 15px;
 
-            h2{margin: 0;}
+            h2{
+                margin: 0;
+
+                a{
+                    color: $very-dark-gray;
+                    
+                    &:hover{
+                        color: darken($very-dark-gray,10%);
+                    }
+                }
+            }
         }
 
         .meta{

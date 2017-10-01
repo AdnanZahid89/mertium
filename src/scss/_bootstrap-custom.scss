@@ -3,6 +3,7 @@
 // custom variables
 
 $light-gray								: #ccc;
+$very-dark-gray                         : #111;
 
 
 $modal-form-width						: 466px;
@@ -19,7 +20,12 @@ $gray									: lighten($gray-base, 33.5%) !default; // #555
 $gray-dark								: lighten($gray-base, 20%) !default;   // #333
 
 $link-hover-decoration                  : none !default;
-
-$font-family-sans-serif                 : 'Open Sans', sans-serif !default;
-$headings-font-family                   : 'Germania One', cursive !default;
-$headings-font-weight                   : 400 !default;
+$font-size-base                         : 14px !default;
+$font-family-sans-serif                 : 'Roboto', sans-serif !default;
+$headings-font-family                   : 'Raleway', sans-serif !default;
+$font-size-h1                           : floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h2                           : floor(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3                           : ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h4                           : ceil(($font-size-base * 1.1)) !default; // ~16px
+$headings-font-weight                   : 700 !default;
+$headings-color                         : $very-dark-gray !default;
