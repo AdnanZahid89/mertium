@@ -5,12 +5,17 @@
     li{
         vertical-align: top;
         letter-spacing: 0;
-        padding: 0 10px 20px;
+        padding: 0 10px 30px;
         width: 100%;
 
         @include media('≥tablet') {width: 50%;}
         @include media('≥desktop') {width: 33.33%;}
         @include media('≥widescreen') {width: 25%;}
+    }
+
+    .holder{
+        @extend %clearfix;
+        box-shadow: 0 0 8px 1px rgba(black,.4);
     }
 
     .img-holder{
@@ -26,6 +31,7 @@
 
     .text-holder{
         overflow: hidden;
+        padding: 5px 10px;
 
         .post-header{
             overflow: hidden;
@@ -38,7 +44,7 @@
                     color: $very-dark-gray;
                     
                     &:hover{
-                        color: darken($very-dark-gray,10%);
+                        color: lighten($very-dark-gray,30%);
                     }
                 }
             }

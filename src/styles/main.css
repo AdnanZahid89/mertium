@@ -29,7 +29,7 @@ a {
 @viewport {
   width: device-width; }
 
-.clearfix:after {
+.clearfix:after, .feed-list.list-inline .holder:after {
   content: '';
   display: block;
   clear: both; }
@@ -79,7 +79,7 @@ a {
   .feed-list.list-inline li {
     vertical-align: top;
     letter-spacing: 0;
-    padding: 0 10px 20px;
+    padding: 0 10px 30px;
     width: 100%; }
     @media (min-width: 768px) {
       .feed-list.list-inline li {
@@ -90,6 +90,8 @@ a {
     @media (min-width: 1200px) {
       .feed-list.list-inline li {
         width: 25%; } }
+  .feed-list.list-inline .holder {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4); }
   .feed-list.list-inline .img-holder {
     overflow: hidden;
     margin: 0 0 10px; }
@@ -98,7 +100,8 @@ a {
       width: 100%;
       height: auto; }
   .feed-list.list-inline .text-holder {
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 5px 10px; }
     .feed-list.list-inline .text-holder .post-header {
       overflow: hidden;
       margin: 0 0 15px; }
@@ -107,7 +110,7 @@ a {
         .feed-list.list-inline .text-holder .post-header h2 a {
           color: #111; }
           .feed-list.list-inline .text-holder .post-header h2 a:hover {
-            color: black; }
+            color: #5e5e5e; }
     .feed-list.list-inline .text-holder .meta {
       overflow: hidden;
       font-size: 13px;
