@@ -10,7 +10,7 @@ class ItemHolder extends Component {
 	  	<header className="page-header text-center">
 			<h1>Mertium</h1>
 		</header>
-		
+			
 			<Item/>
 	  </div>
     );
