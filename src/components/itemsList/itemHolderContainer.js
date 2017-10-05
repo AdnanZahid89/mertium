@@ -1,17 +1,20 @@
 import ItemHolder from './ItemHolder'
 import { connect } from 'react-redux';
+import { loadItems } from '../../actions/index'
 
-function mapDispatchToProps(owprops) {
+
+function mapStateToProps(state)  {
+  return {items: state.items}
+}
+
+function mapDispatchToProps(dispatch) {
     return {
-
-    getItems() {
-        return (dispatch) => {
-            return 
-        }
-    }
+      getItems() {
+        dispatch(loadItems())
+      }
 }}
 
 export default connect(
-  null, 
+  mapStateToProps,
   mapDispatchToProps
 )(ItemHolder)

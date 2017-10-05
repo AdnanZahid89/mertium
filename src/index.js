@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import {applyMiddleware, createStore, compose} from 'redux';
-import { routerMiddleware } from 'react-router-redux'
+import { routerMiddleware, ConnectedRouter } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
-import rootReducer from './reducers'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers/index'
 import './styles/font-awesome.min.css';
 import './styles/main.css';
 import './styles/bootstrap.css';
@@ -42,5 +43,19 @@ const store = createStore(
 export default store
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+
+const target = document.querySelector('#root')
+
+render(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <div>
+        <App />
+      </div>
+    </ConnectedRouter>
+  </Provider>,
+  target
+)
+
 registerServiceWorker();

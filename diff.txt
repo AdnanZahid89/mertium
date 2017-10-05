@@ -1,0 +1,111 @@
+diff --git a/src/actions/index.js b/src/actions/index.js
+new file mode 100644
+index 0000000..4239180
+--- /dev/null
++++ b/src/actions/index.js
+@@ -0,0 +1,12 @@
++const ITEMS_LOADED = 'ITEMS_LOADED'
++
++const loadItems = () => {
++  return (dispatch) => {
++    fetch('API URL WILL COME HERE').then(data => dispatch(itemsLoaded(data)))
++  }
++}
++
++function itemsLoaded(data) {
++  return {type: ITEMS_LOADED, payload: data}
++}
++
+diff --git a/src/components/itemsList/ItemHolder.js b/src/components/itemsList/ItemHolder.js
+index 00488e7..35d8d2c 100644
+--- a/src/components/itemsList/ItemHolder.js
++++ b/src/components/itemsList/ItemHolder.js
+@@ -4,14 +4,17 @@ import Item from './Item.js';
+ 
+ class ItemHolder extends Component {
+ 
++  componentDidMount() {
++    this.props.getItems()
++  }
++
+   render() {
+     return (
+ 	  <div className="container-fluid">
+ 	  	<header className="page-header text-center">
+ 			<h1>Mertium</h1>
+ 		</header>
+-			
+-			<Item/>
++			{ this.props.items.map(item, index) => <Item key=index/>}
+ 	  </div>
+     );
+   }
+diff --git a/src/components/itemsList/itemHolderContainer.js b/src/components/itemsList/itemHolderContainer.js
+index 6184d03..fc66a0e 100644
+--- a/src/components/itemsList/itemHolderContainer.js
++++ b/src/components/itemsList/itemHolderContainer.js
+@@ -1,17 +1,20 @@
+ import ItemHolder from './ItemHolder'
+ import { connect } from 'react-redux';
++import { loadItems } from '../../actions/index'
+ 
+-function mapDispatchToProps(owprops) {
+-    return {
+ 
+-    getItems() {
+-        return (dispatch) => {
+-            return 
+-        }
+-    }
++function mapStateToProps(state)  {
++  return {items: state.items}
++}
++
++function mapDispatchToProps(dispatch) {
++    return {
++      getItems() {
++        dispatch(loadItems())
++      }
+ }}
+ 
+ export default connect(
+-  null, 
++  mapStateToProps,
+   mapDispatchToProps
+ )(ItemHolder)
+\ No newline at end of file
+diff --git a/src/index.js b/src/index.js
+index f01b420..48727f8 100644
+--- a/src/index.js
++++ b/src/index.js
+@@ -4,7 +4,7 @@ import {applyMiddleware, createStore, compose} from 'redux';
+ import { routerMiddleware } from 'react-router-redux'
+ import thunk from 'redux-thunk'
+ import createHistory from 'history/createBrowserHistory'
+-import rootReducer from './reducers'
++import rootReducer from './reducers/index'
+ import './styles/font-awesome.min.css';
+ import './styles/main.css';
+ import './styles/bootstrap.css';
+diff --git a/src/reducers/index.js b/src/reducers/index.js
+index eedd0b1..2e0ce50 100644
+--- a/src/reducers/index.js
++++ b/src/reducers/index.js
+@@ -1,6 +1,10 @@
+-import { combineReducers } from 'redux'
+-import { routerReducer } from 'react-router-redux'
++import { ITEMS_LOADED } from './actions/index'
+ 
+-export default combineReducers({
+-  routing: routerReducer
+-})
+\ No newline at end of file
++export function reducer(state, action) {
++  switch(action.type) {
++    case ITEMS_LOADED:
++       return {items: action.payload}
++    default:
++       return {items: []}
++  }
++}
+\ No newline at end of file
