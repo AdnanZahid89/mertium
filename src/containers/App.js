@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ItemHolder from '../components/itemsList/ItemHolder.js';
+import ItemHolder from '../components/itemsList/itemHolderContainer';
 
 
 class App extends Component {
