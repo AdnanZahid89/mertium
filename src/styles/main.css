@@ -88,10 +88,10 @@ a {
       .feed-list.list-inline li {
         width: 33%; } }
   .feed-list.list-inline .holder {
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4); }
+    border: 1px solid #eeeeee; }
   .feed-list.list-inline .img-holder {
     overflow: hidden;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 1px solid #eeeeee;
     margin: 0 0 10px; }
     .feed-list.list-inline .img-holder img {
       display: block;

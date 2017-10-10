@@ -15,12 +15,13 @@
 
     .holder{
         @extend %clearfix;
-        box-shadow: 0 0 8px 1px rgba(black,.4);
+        border: 1px solid lighten($gray,60%);
+        //box-shadow: 0 0 8px 1px rgba(black,.4);
     }
 
     .img-holder{
         overflow: hidden;
-        border-bottom: 1px solid lighten($gray,40%);
+        border-bottom: 1px solid lighten($gray,60%);
         margin: 0 0 10px;
 
         img{
