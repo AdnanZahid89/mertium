@@ -84,16 +84,14 @@ a {
     @media (min-width: 768px) {
       .feed-list.list-inline li {
         width: 50%; } }
-    @media (min-width: 992px) {
-      .feed-list.list-inline li {
-        width: 33.33%; } }
     @media (min-width: 1200px) {
       .feed-list.list-inline li {
-        width: 25%; } }
+        width: 33%; } }
   .feed-list.list-inline .holder {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4); }
   .feed-list.list-inline .img-holder {
     overflow: hidden;
+    border-bottom: 1px solid #bbbbbb;
     margin: 0 0 10px; }
     .feed-list.list-inline .img-holder img {
       display: block;
