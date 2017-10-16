@@ -37,15 +37,15 @@ class Item extends Component {
                     <header className="post-header">
                         <h2><a href={this.props.post.origin_url} target="_blank">{this.props.post.title}</a></h2>
                         <div className="meta">
-                            <span className="post-info">{sourceName}</span>
-                            <span className="post-author">{this.props.post.author}</span>
-                            <span className="post-date">{date}</span>
+                            {/* <span className="post-info">{sourceName}</span> */}
+                            {this.props.post.author ? <span className="post-author">{this.props.post.author}</span> : ''}
+                            {this.props.post.published_at ? <span className="post-date">{date}</span> : ''}
                         </div>
                     </header>
                     <div className="text">
-                        {this.props.post.summary.length > 0 ?
+                        {this.props.post.summary.length > 0?
                             <p>
-                                <EllipsisText text={this.props.post.summary} length={'150'} tail={' [...]'} />
+                                <EllipsisText text={this.props.post.summary} length={150} tail={' [...]'} />
                             </p>
                             : null
                         }
