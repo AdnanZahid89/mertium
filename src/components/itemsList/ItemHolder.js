@@ -18,7 +18,7 @@ function fetchPostsWithRedux() {
 }
 
 function fetchPosts() {
-  const URL = "http://ec2-34-224-85-19.compute-1.amazonaws.com:8000/get_feeds/";
+  const URL = "http://54.157.94.63:8000/get_feeds/";
   return fetch(URL, { method: 'GET'})
      .then( response => Promise.all([response, response.json()]));
 }
